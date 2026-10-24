@@ -129,3 +129,17 @@ body:has(.story-dialog[open]){overflow:hidden}
 .hero-media img{scale:1.14}
 }
 
+
+/* Keep full subjects and readable artwork proportions on large displays. */
+html{background:var(--bg)}
+body{max-width:1920px;margin-inline:auto}
+@media(min-width:1600px){
+.hero{min-height:clamp(900px,50vw,960px)}
+.about-picture{height:560px}
+}
+
+/* Fit both hero subjects and the action within small laptop screens. */
+@media(min-width:861px) and (max-width:1100px){
+.hero-media img{scale:1;object-position:60% 50%}
+.hero-cta{min-width:0;width:min(100%,340px);min-height:64px;font-size:20px}
+}
