@@ -138,3 +138,8 @@ body{max-width:1920px;margin-inline:auto}
 .about-picture{height:560px}
 }
 
+/* Fit both hero subjects and the action within small laptop screens. */
+@media(min-width:861px) and (max-width:1100px){
+.hero-media img{scale:1;object-position:60% 50%}
+.hero-cta{min-width:0;width:min(100%,340px);min-height:64px;font-size:20px}
+}
